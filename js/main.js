@@ -167,20 +167,6 @@
     );
   }
 
-  // Contact → LinkedIn (no public email on source site)
-  const form = document.querySelector("#connect-form");
-  if (form) {
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const note = form.querySelector(".form-note");
-      if (note) {
-        note.textContent =
-          "Thank you. Continue the conversation on LinkedIn, or use any channel listed above.";
-      }
-      window.open("https://www.linkedin.com/in/khparekh/", "_blank", "noopener");
-    });
-  }
-
   // Home bio Read More / Read Less (matches live site pattern)
   const bioToggle = document.getElementById("bio-toggle");
   const bioMore = document.getElementById("bio-more");
