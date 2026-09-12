@@ -609,12 +609,14 @@ h1, h2, h3, .display {
   filter: drop-shadow(0 24px 48px rgba(15, 23, 42, 0.12));
 }
 .hero-portrait::after {
+  /* Soft edge only at the very bottom — keep shoes fully visible */
   content: "";
   position: absolute;
-  inset: auto 8% 6% 18%;
-  height: 45%;
+  inset: auto 8% 0 18%;
+  height: 8%;
   background: linear-gradient(transparent, var(--bg));
   pointer-events: none;
+  opacity: .35;
 }
 .hero-float {
   position: absolute;
@@ -1457,17 +1459,18 @@ h1, h2, h3, .display {
 /* ─── FOOTER ─── */
 .site-footer {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 3.75rem 0 2rem;
+  padding: 2.75rem 0 1.5rem;
   background: var(--navy);
   color: rgba(255, 255, 255, 0.85);
 }
 .foot-grid {
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr 1fr;
-  gap: 2rem;
-  margin-bottom: 3rem;
+  gap: 1.75rem 2rem;
+  margin-bottom: 1.75rem;
+  align-items: start;
 }
-.foot-brand img { width: 52px; height: 52px; margin-bottom: 1.1rem; }
+.foot-brand img { width: 52px; height: 52px; margin-bottom: .85rem; }
 .foot-brand b {
   display: block;
   font-family: var(--display);
@@ -1480,9 +1483,10 @@ h1, h2, h3, .display {
   color: rgba(255, 255, 255, 0.65);
   max-width: 26rem;
   font-size: .95rem;
+  line-height: 1.55;
 }
 .foot-col h4 {
-  margin: 0 0 1rem;
+  margin: 0 0 .85rem;
   font-family: var(--sans);
   font-size: .68rem;
   letter-spacing: .2em;
@@ -1493,16 +1497,17 @@ h1, h2, h3, .display {
 .foot-col a {
   display: block;
   color: rgba(255, 255, 255, 0.6);
-  margin-bottom: .55rem;
+  margin-bottom: .45rem;
   font-size: .92rem;
 }
+.foot-col a:last-child { margin-bottom: 0; }
 .foot-col a:hover { color: #fff; }
 .foot-bottom {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
   flex-wrap: wrap;
-  padding-top: 1.4rem;
+  padding-top: 1.15rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   color: rgba(255, 255, 255, 0.55);
   font-size: .82rem;
@@ -1670,12 +1675,14 @@ h1, h2, h3, .display {
   filter: drop-shadow(0 24px 48px rgba(15, 23, 42, 0.1));
 }
 .about-banner-photo::after {
+  /* Soft edge only at the very bottom — keep shoes fully visible */
   content: "";
   position: absolute;
   inset: auto 6% 0 20%;
-  height: 35%;
+  height: 8%;
   background: linear-gradient(transparent, var(--bg));
   pointer-events: none;
+  opacity: .35;
 }
 .about-banner-rail {
   position: relative;
@@ -2253,4 +2260,41 @@ h1, h2, h3, .display {
   .gallery-stack {
     grid-template-rows: auto;
   }
+}
+
+
+/* Footer social icons */
+.foot-social {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .55rem;
+  margin-top: 0;
+}
+.foot-col .foot-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.35rem;
+  height: 2.35rem;
+  margin: 0;
+  border: 1px solid rgba(255,255,255,.22);
+  border-radius: 999px;
+  color: #fff;
+  background: transparent;
+  transition: background .25s ease, border-color .25s ease, color .25s ease, transform .25s ease;
+}
+.foot-social a svg {
+  width: 1.05rem;
+  height: 1.05rem;
+  display: block;
+}
+.foot-col .foot-social a:hover {
+  background: var(--crimson, #C8102E);
+  border-color: var(--crimson, #C8102E);
+  color: #fff;
+  transform: translateY(-2px);
+}
+[data-theme="dark"] .foot-col .foot-social a {
+  border-color: rgba(255,255,255,.28);
 }
