@@ -615,6 +615,9 @@ h1, h2, h3, .display {
   align-items: end;
   gap: 1rem;
 }
+.hero-grid > * {
+  min-width: 0;
+}
 .hero-copy {
   padding: clamp(2rem, 5vw, 4.5rem) 0 clamp(2.5rem, 6vw, 5rem);
   z-index: 2;
@@ -642,6 +645,9 @@ h1, h2, h3, .display {
 }
 .hero-portrait img {
   width: min(100%, 560px);
+  height: auto;
+  object-fit: contain;
+  object-position: center;
   margin-left: auto;
   filter: drop-shadow(0 24px 48px rgba(15, 23, 42, 0.12));
 }
@@ -1742,6 +1748,18 @@ h1, h2, h3, .display {
     min-height: auto;
     padding-bottom: 1rem;
   }
+  .hero-portrait {
+    width: 100%;
+    justify-self: center;
+  }
+  .hero-portrait img {
+    width: min(100%, 420px);
+    max-height: 500px;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+    margin-inline: auto;
+  }
   .hero-bg {
     background:
       radial-gradient(ellipse 78% 50% at 50% 16%, var(--crimson-glow), transparent 68%),
@@ -2284,6 +2302,12 @@ h1, h2, h3, .display {
   gap: 1rem;
   align-items: stretch;
 }
+.gallery-showcase > *,
+.gallery-stack,
+.gallery-row,
+.gallery-tile {
+  min-width: 0;
+}
 .gallery-feature {
   margin: 0;
   overflow: hidden;
@@ -2436,6 +2460,16 @@ h1, h2, h3, .display {
   }
   .gallery-stack {
     grid-template-rows: auto;
+  }
+  .gallery-feature img,
+  .gallery-tile img,
+  .section-photo-wrap img,
+  .amsys-photo-banner img {
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: auto;
+    object-fit: contain;
+    object-position: center;
   }
 }
 
