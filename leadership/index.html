@@ -191,7 +191,7 @@
       <span>© <span class="year"></span> Khalid Parekh. All rights reserved.</span>
     </div>
   </footer>
-  <script>document.querySelectorAll('.year').forEach(el=>el.textContent=2026);</script>
+  <script>document.querySelectorAll('.year').forEach(el=>el.textContent=Math.max(2026,new Date().getFullYear()));</script>
   <script src="../js/main.js" defer></script>
 </body>
 </html>
