@@ -16,6 +16,7 @@ python3 -m http.server 8080
 | Press & News | `/press/` |
 | Leadership & Vision | `/leadership/` |
 | Blog | `/blog/` + `/blog/<slug>/` |
+| Store | `/product/` |
 | Contact | `/contact/` |
 
 ## Typography
