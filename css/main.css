@@ -2468,8 +2468,6 @@ h1, h2, h3, .display {
     max-width: 100%;
     height: auto;
     aspect-ratio: auto;
-    object-fit: contain;
-    object-position: center;
   }
 }
 
