@@ -7,16 +7,16 @@ cd /Applications/Projects/Office/kp
 python3 -m http.server 8080
 ```
 
-## Menu → Pages
+## Menu → Routes
 
-| Menu | Page file |
-|------|-----------|
-| Home | `index.html` |
-| About | `about.html` |
-| Press & News | `press.html` |
-| Leadership & Vision | `leadership.html` |
-| Blog | `blog.html` + `blog/*.html` |
-| Contact | `contact.html` |
+| Menu | Public route |
+|------|--------------|
+| Home | `/` |
+| About | `/about/` |
+| Press & News | `/press/` |
+| Leadership & Vision | `/leadership/` |
+| Blog | `/blog/` + `/blog/<slug>/` |
+| Contact | `/contact/` |
 
 ## Typography
 
