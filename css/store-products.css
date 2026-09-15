@@ -272,15 +272,15 @@ section.ws-slider {
     background-attachment: fixed;
     background-position: center; }
   section.ws-slider #owl-warmshop04.owl-carousel .slider_item.item01 {
-    background-image: url("https://khalidparekh.com/wp-content/uploads/2026/09/download.jpeg");
+    background-image: url("../assets/images/store/slider-hoodie.png");
     background-repeat: no-repeat;
     background-position: center; }
   section.ws-slider #owl-warmshop04.owl-carousel .slider_item.item02 {
-    background-image: url("https://khalidparekh.com/wp-content/uploads/2026/09/slider5.jpg");
+    background-image: url("../assets/images/store/slider-caps.png");
     background-repeat: no-repeat;
     background-position: center; }
   section.ws-slider #owl-warmshop04.owl-carousel .slider_item.item03 {
-    background-image: url("https://khalidparekh.com/wp-content/uploads/2026/09/slider6.jpg");
+    background-image: url("../assets/images/store/slider-tshirt.png");
     background-repeat: no-repeat;
     background-position: center; }
 
