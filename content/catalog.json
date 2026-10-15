@@ -1,5 +1,14 @@
 [
   {
+    "slug": "why-enterprise-ai-strategies-fail",
+    "title": "The Real Reason 79% of Enterprise AI Strategies Fail",
+    "date": "2026-10-15",
+    "excerpt": "Most enterprise AI strategies fail before launch. NVIDIA AI Advisory Board member Khalid Parekh explains the governance gaps behind it and how to fix them.",
+    "link": "https://khalidparekh.com/blog/why-enterprise-ai-strategies-fail/",
+    "kind": "blog",
+    "image": "nvidia-board.png"
+  },
+  {
     "slug": "amsys-for-education-launch",
     "title": "AMSYS for Education: Built for the Campus That Has to Modernize and Secure Itself at the Same Time",
     "date": "2026-09-15",

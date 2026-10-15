@@ -1643,7 +1643,9 @@ h1, h2, h3, .display {
 
 /* ─── Article / listing shared ───
    Reading column is .article-hero .wrap and .article-body.
-   A related-posts block should sit outside .article-body, in .wrap. */
+   .more-posts sits after .article-body. Its cards live in .wrap
+   so they use the site grid, not the reading column.
+   scripts/build-more-posts.py fills that block from content/catalog.json. */
 .article-hero {
   padding: calc(var(--nav) + 2.75rem) 0 1.75rem;
   border-bottom: 1px solid var(--border);
@@ -1819,6 +1821,28 @@ h1, h2, h3, .display {
   line-height: 1.4;
   letter-spacing: .1em;
   text-transform: uppercase;
+}
+.more-posts {
+  padding: 0 0 clamp(3.25rem, 7vw, 5rem);
+  background: var(--bg);
+}
+.more-posts h2 {
+  margin: 0 0 1.15rem;
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: var(--type-h2);
+  line-height: 1.22;
+  letter-spacing: -0.015em;
+  color: var(--text);
+}
+.more-posts .mag-cols {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+@media (max-width: 1180px) {
+  .more-posts .mag-cols { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 720px) {
+  .more-posts .mag-cols { grid-template-columns: 1fr; }
 }
 .page-hero { padding: calc(var(--nav) + 4rem) 0 2.5rem; background: var(--bg); }
 main:has(.mag-cols) .page-hero h1 {
