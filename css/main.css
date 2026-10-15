@@ -50,6 +50,15 @@
 
   --display: "Cormorant Garamond", "Times New Roman", Georgia, serif;
   --sans: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  /* Blog type scale: headings use --display, body and captions use --sans. */
+  --article: 42rem;
+  --type-h1: clamp(1.9rem, 1.25rem + 1.7vw, 2.75rem);
+  --type-h2: clamp(1.45rem, 1.2rem + 0.7vw, 1.85rem);
+  --type-h3: clamp(1.2rem, 1.08rem + 0.4vw, 1.4rem);
+  --type-h4: clamp(1.05rem, 1rem + 0.2vw, 1.18rem);
+  --type-body: 1.0625rem;
+  --type-lede: clamp(1.05rem, 1rem + 0.28vw, 1.2rem);
+  --type-caption: 0.75rem;
   --max: 1320px;
   --nav: 92px;
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
@@ -1184,15 +1193,21 @@ h1, h2, h3, .display {
   margin-bottom: 1.1rem;
 }
 .mag-feature h3 {
+  font-family: var(--display);
+  font-weight: 600;
   font-size: clamp(1.7rem, 3.2vw, 2.6rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
   margin-bottom: 1rem;
 }
-.mag-feature p { color: var(--text-muted); margin: 0 0 1.5rem; }
+.mag-feature p { color: var(--text-muted); margin: 0 0 1.5rem; line-height: 1.6; }
 .mag-cols {
   display: grid;
-  grid-template-columns: 1.2fr 1fr 1fr;
-  gap: 0 2rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 2.5rem;
   border-top: 1px solid var(--border);
+  align-items: stretch;
 }
 .mag-item {
   padding: 1.75rem 0;
@@ -1208,13 +1223,20 @@ h1, h2, h3, .display {
   margin-bottom: .85rem;
 }
 .mag-item h3 {
-  font-size: 1.3rem;
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: clamp(1.35rem, 1.15rem + 0.5vw, 1.65rem);
+  line-height: 1.22;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
   margin-bottom: .7rem;
 }
 .mag-item p {
   margin: 0 0 1rem;
   color: var(--text-muted);
-  font-size: .92rem;
+  font-family: var(--sans);
+  font-size: .95rem;
+  line-height: 1.6;
 }
 .more {
   font-size: .72rem;
@@ -1619,64 +1641,203 @@ h1, h2, h3, .display {
   font-size: .82rem;
 }
 
-/* ─── Article / listing shared ─── */
+/* ─── Article / listing shared ───
+   Reading column is .article-hero .wrap and .article-body.
+   A related-posts block should sit outside .article-body, in .wrap. */
 .article-hero {
-  padding: calc(var(--nav) + 3rem) 0 2rem;
+  padding: calc(var(--nav) + 2.75rem) 0 1.75rem;
   border-bottom: 1px solid var(--border);
   background: var(--bg);
 }
-.article-hero .meta {
+.article-hero .wrap {
+  width: min(100% - 2.5rem, var(--article));
+}
+.article-hero .meta,
+.mag-item .meta {
+  font-family: var(--sans);
+  font-weight: 600;
   color: var(--text-muted);
-  font-size: .78rem;
+  font-size: var(--type-caption);
+  line-height: 1.4;
   letter-spacing: .12em;
   text-transform: uppercase;
-  margin-bottom: 1rem;
+}
+.mag-feature .tag {
+  font-family: var(--sans);
+  line-height: 1.4;
+}
+.article-hero .meta { margin-bottom: .85rem; }
+.article-hero h1 {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: var(--type-h1);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+  max-width: none;
+}
+.article-hero .lede {
+  max-width: none;
+  margin-top: 1rem;
+  font-family: var(--sans);
+  font-size: var(--type-lede);
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--text-muted);
 }
 .article-body {
-  width: min(100% - 2.5rem, var(--max));
-  max-width: min(var(--max), 72rem);
-  margin: 0 auto;
-  padding: clamp(2.25rem, 5vw, 3rem) 0 clamp(3.5rem, 8vw, 5rem);
+  width: min(100% - 2.5rem, var(--article));
+  max-width: var(--article);
+  margin-inline: auto;
+  padding: clamp(1.75rem, 4vw, 2.5rem) 0 clamp(3.5rem, 8vw, 5rem);
+  font-family: var(--sans);
+  font-size: var(--type-body);
+  line-height: 1.7;
+  color: var(--text-2);
+  overflow-wrap: break-word;
 }
 .article-body > * {
-  width: min(100%, 42rem);
-  margin-inline: auto;
+  width: auto;
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
 }
-.article-body h2, .article-body h3 {
-  margin: 2rem 0 .85rem;
-  font-size: clamp(1.45rem, 2.5vw, 1.8rem);
-  line-height: 1.15;
+.article-body h2,
+.article-body h3,
+.article-body h4 {
+  font-family: var(--display);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--text);
+  text-wrap: balance;
+  max-width: 100%;
 }
-.article-body p, .article-body li {
-  color: var(--text-muted);
-  margin: 0 0 1.1rem;
-  font-size: clamp(1rem, 0.97rem + 0.14vw, 1.08rem);
+.article-body h2 {
+  margin: 2.15rem 0 .75rem;
+  font-size: var(--type-h2);
+  line-height: 1.22;
+}
+.article-body h3 {
+  margin: 1.7rem 0 .6rem;
+  font-size: var(--type-h3);
+  line-height: 1.3;
+}
+.article-body h4 {
+  margin: 1.35rem 0 .45rem;
+  font-size: var(--type-h4);
+  line-height: 1.35;
+}
+.article-body p,
+.article-body li {
+  color: var(--text-2);
+  font-family: var(--sans);
+  font-size: var(--type-body);
+  line-height: 1.7;
+}
+.article-body p { margin: 0 0 1rem; }
+.article-body p:empty,
+.article-body h2:empty,
+.article-body h3:empty,
+.article-body h4:empty {
+  display: none;
+  margin: 0;
 }
 .article-body ul,
 .article-body ol {
-  width: min(100%, 42rem);
-  margin: 0 auto 1.35rem;
-  padding-left: 1.3rem;
+  width: auto;
+  max-width: 100%;
+  margin: 0 0 1.15rem;
+  padding-left: 1.25rem;
 }
+.article-body li { margin: 0 0 .4rem; }
+.article-body li:last-child { margin-bottom: 0; }
 .article-body img {
   width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: .35rem 0 1.15rem;
   border-radius: var(--radius);
   box-shadow: var(--shadow-sm);
+}
+.article-body :is(h2, h3, h4):has(img) {
+  margin: 1.25rem 0;
+  line-height: 0;
+}
+.article-body a:has(img) {
+  display: block;
+  text-decoration: none;
 }
 .article-body a {
   color: var(--crimson);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+.article-body a[style] {
+  background: none !important;
+  font-size: inherit !important;
+}
+.article-body hr {
+  width: 100%;
+  height: 1px;
+  margin: 1.75rem 0;
+  border: 0;
+  background: var(--border-2);
+}
+.article-body blockquote {
+  margin: 1.35rem 0;
+  padding: .15rem 0 .15rem 1.05rem;
+  border-left: 3px solid var(--crimson);
+  color: var(--text);
+}
+.article-body blockquote :is(p, h2, h3, h4) { margin: 0; }
+.article-body blockquote :is(h2, h3, h4) { font-size: var(--type-h4); line-height: 1.35; }
+.article-body table {
+  width: 100%;
+  max-width: 100%;
+  margin: 1.15rem 0 1.4rem;
+  border-collapse: collapse;
+  border: 0;
+}
+.article-body td,
+.article-body th {
+  padding: 1rem 1.1rem;
+  background: var(--bg-2);
+  border-left: 3px solid var(--crimson);
+  vertical-align: top;
+}
+.article-body td :is(h2, h3, h4):first-child,
+.article-body th :is(h2, h3, h4):first-child { margin-top: 0; }
+.article-body td p:last-child,
+.article-body th p:last-child { margin-bottom: 0; }
+.article-body sub { font-size: .75em; }
 .back-link {
   display: inline-flex;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.15rem;
   color: var(--text-muted);
-  font-size: .78rem;
+  font-family: var(--sans);
+  font-size: var(--type-caption);
+  line-height: 1.4;
   letter-spacing: .1em;
   text-transform: uppercase;
 }
 .page-hero { padding: calc(var(--nav) + 4rem) 0 2.5rem; background: var(--bg); }
+main:has(.mag-cols) .page-hero h1 {
+  font-family: var(--display);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+  max-width: 40rem;
+}
+main:has(.mag-cols) .page-hero .lede {
+  max-width: 40rem;
+  font-family: var(--sans);
+  font-size: var(--type-lede);
+  line-height: 1.6;
+}
+main:has(.mag-cols) .insights {
+  padding-bottom: clamp(3rem, 6vw, 4.5rem);
+}
 
 /* ─── Motion ─── */
 .reveal {
@@ -1743,6 +1904,9 @@ h1, h2, h3, .display {
   .wrap,
   .wrap-s,
   .wrap-l { width: min(100% - 1.4rem, var(--max)); }
+  .article-hero .wrap,
+  .article-body { width: min(100% - 1.4rem, var(--article)); }
+  .article-hero { padding: calc(var(--nav) + 1.6rem) 0 1.25rem; }
   .page-hero { padding: calc(var(--nav) + 2.75rem) 0 2rem; }
   .hero {
     min-height: auto;
