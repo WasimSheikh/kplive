@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("kp-theme");
+        if (t === "dark" || t === "light") document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
+
+  <title>Why Enterprise AI Strategies Fail | Khalid Parekh</title>
+  <meta name="description" content="Most enterprise AI strategies fail before launch. NVIDIA AI Advisory Board member Khalid Parekh explains the governance gaps behind it and how to fix them." />
+  <link rel="canonical" href="https://khalidparekh.com/blog/why-enterprise-ai-strategies-fail/" />
+  <meta property="og:title" content="Why Enterprise AI Strategies Fail | Khalid Parekh" />
+  <meta property="og:description" content="Most enterprise AI strategies fail before launch. NVIDIA AI Advisory Board member Khalid Parekh explains the governance gaps behind it and how to fix them." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://khalidparekh.com/blog/why-enterprise-ai-strategies-fail/" />
+  <meta property="og:image" content="https://khalidparekh.com/assets/images/nvidia-board.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Why Enterprise AI Strategies Fail | Khalid Parekh" />
+  <meta name="twitter:description" content="Most enterprise AI strategies fail before launch. NVIDIA AI Advisory Board member Khalid Parekh explains the governance gaps behind it and how to fix them." />
+  <meta name="twitter:image" content="https://khalidparekh.com/assets/images/nvidia-board.png" />
+  <meta name="twitter:url" content="https://khalidparekh.com/blog/why-enterprise-ai-strategies-fail/" />
+  <link rel="icon" href="../../assets/images/logo.png" />
+  <link rel="apple-touch-icon" href="../../assets/images/logo-full.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/main.css" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"The Real Reason 79% of Enterprise AI Strategies Fail","description":"Most enterprise AI strategies fail before launch. NVIDIA AI Advisory Board member Khalid Parekh explains the governance gaps behind it and how to fix them.","image":"https://khalidparekh.com/assets/images/nvidia-board.png","datePublished":"2026-10-15","dateModified":"2026-10-15","author":{"@type":"Person","name":"Khalid Parekh","url":"https://khalidparekh.com/"},"publisher":{"@type":"Organization","name":"Khalid Parekh","url":"https://khalidparekh.com/","logo":{"@type":"ImageObject","url":"https://khalidparekh.com/assets/images/logo-full.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://khalidparekh.com/blog/why-enterprise-ai-strategies-fail/"}}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header scrolled" data-header>
+    <div class="wrap nav-bar">
+      <a class="brand" href="../../" aria-label="Khalid Parekh home">
+        <img src="../../assets/images/logo-full.png" width="44" height="44" alt="Parekh crest logo" />
+        <span><b>Khalid Parekh</b><small>Official Website</small></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-drawer"><i></i></button>
+      <div class="nav-drawer" id="nav-drawer">
+        <nav aria-label="Primary">
+                    <ul class="nav-links">
+            <li><a href="../../">Home</a></li>
+            <li><a href="../../about/">About</a></li>
+            <li><a href="../../press/">Press &amp; News</a></li>
+            <li><a href="../../leadership/">Leadership &amp; Vision</a></li>
+            <li><a href="../../blog/">Blog</a></li>
+            <li><a href="../../product/">Store</a></li>
+            <li class="nav-theme">
+              <div class="theme-dropdown" data-theme-dropdown>
+                <button type="button" class="theme-trigger" aria-haspopup="listbox" aria-expanded="false" aria-label="Color theme">
+                  <span class="theme-trigger-icon" aria-hidden="true">◐</span>
+                  <span class="theme-trigger-label" data-theme-label>Light</span>
+                  <span class="theme-trigger-caret" aria-hidden="true">▾</span>
+                </button>
+                <ul class="theme-menu" role="listbox" aria-label="Color theme" hidden>
+                  <li><button type="button" role="option" data-theme-set="light">Light</button></li>
+                  <li><button type="button" role="option" data-theme-set="dark">Dark</button></li>
+                </ul>
+              </div>
+            </li>
+
+            <li><a class="btn btn-fill" href="../../contact/">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+    <header class="article-hero">
+      <div class="wrap">
+        <a class="back-link" href="../../blog/">← Blog</a>
+        <div class="meta">Oct 15, 2026 · Khalid Parekh · 5 min read</div>
+        <h1 class="d3">The Real Reason 79% of Enterprise AI Strategies Fail</h1>
+        <p class="lede" style="margin-top:1rem;">Most enterprise AI strategies fail before launch. NVIDIA AI Advisory Board member Khalid Parekh explains the governance gaps behind it and how to fix them.</p>
+      </div>
+    </header>
+    <article class="article-body">
+<p>Most companies don't have an enterprise AI strategy. They have an AI budget line and a slide deck.</p>
+
+<p>That's not a cheap shot. It's what the data says. <a href="https://www.beri.net/article/enterprise-ai-adoption-79-percent-fail-despite-million-budgets" target="_blank" rel="noopener">Writer's 2026 AI Adoption in the Enterprise survey</a> polled 1,200 C-suite executives and 1,200 employees at large organizations. It found that 79% of companies are failing at AI adoption, even though 59% of them spend over $1 million a year on it. Only 21% are getting it right.</p>
+
+<p>I sit on <a href="https://khalidparekh.com/blog/amsys-ceo-khalid-parekh-appointed-to-nvidia-global-enterprise-ai-partner-advisory-board/">NVIDIA's Global Enterprise AI Partner Advisory Board</a>, where I spend a lot of time in rooms with people deploying AI at real scale. I also spent <a href="https://khalidparekh.com/about/">22 years building AMSYS Group</a>'s cybersecurity and managed IT practice. That means I've spent just as much time cleaning up what happens when technology gets adopted faster than it gets governed. Put those two seats together and the pattern behind that 79% number isn't mysterious.</p>
+
+<p>Here's the uncomfortable part: the failure isn't technical. It's structural.</p>
+
+<h2>Why Your Enterprise AI Strategy Becomes Theater</h2>
+
+<p>The same survey found that 75% of executives admit their company's AI strategy is "more for show" than a real operating guide. Three out of four leaders know the strategy on the wall doesn't actually run the business.</p>
+
+<p>I see this constantly with AMSYS clients. A company rolls out an "AI strategy" that's really a procurement decision: buy the tool, announce the tool, hope the tool gets used. Nobody defines what a good outcome looks like. Nobody owns the rollout past the kickoff call.</p>
+
+<p><strong>So what for your business:</strong> if your AI strategy document can't answer "who is accountable when this goes wrong" in one sentence, you don't have a strategy. You have a purchase order. A real strategy is <a href="https://khalidparekh.com/blog/the-executives-playbook-for-building-an-ai-strategy-that-actually-delivers/">a real AI operating strategy</a> with owners, outcomes, and limits.</p>
+
+<h2>Your Employees Are Already Working Around You</h2>
+
+<p>This stat should worry every CIO: 29% of employees admit to actively sabotaging their company's AI strategy. That number jumps to 44% among Gen Z employees.</p>
+
+<p>That's not resistance to change. It's a trust failure. People aren't sabotaging AI because they fear it. They're working around top-down mandates that were never built with their actual workflow in mind.</p>
+
+<p>I built AMSYS from a $100 personal investment into a $350 million company across six industries: technology, healthcare, insurance, hospitality, energy, and finance. One thing held in every vertical. The rollout that survives is the one the people doing the work helped design. The one that gets quietly killed is the one announced in an all-hands and never touched again.</p>
+
+<h2>The Governance Gap Is Also a Security Gap</h2>
+
+<p>This is where my two chairs, NVIDIA advisory board member and 22-year cybersecurity operator, connect. It's also where most AI commentary doesn't go deep enough.</p>
+
+<p>67% of executives in the survey believe their organization has already suffered a data leak or breach tied to unapproved AI tool use. And 36% of companies have no formal plan for supervising AI agents acting on their behalf.</p>
+
+<p>Two-thirds of leaders think they've already been breached through shadow AI. More than a third have no governance plan for the AI agents already running inside their business.</p>
+
+<p>Generic AI strategy content skips this, because most people writing it have never had to clean up after a breach. At AMSYS, we've kept a 97% client retention rate for over two decades because we start by <a href="https://khalidparekh.com/blog/cybersecurity-for-ceos-what-you-must-know-before-its-too-late/">treating AI rollouts as a security decision first</a> and a productivity decision second. An AI strategy that doesn't start with "who can this agent access, and who's watching it" isn't a strategy. It's exposure with a chatbot interface.</p>
+
+<h2>What the 21% Are Actually Doing Differently</h2>
+
+<p>The companies succeeding aren't the ones with the biggest AI budgets. In my experience advising enterprises through the NVIDIA partner network, and running AMSYS's own AI rollouts for clients, the 21% share three habits:</p>
+
+<ol>
+<li><strong>They name an owner, not a committee.</strong> One accountable person per AI initiative, with authority to kill a bad rollout.</li>
+<li><strong>They govern access before they govern output.</strong> Every AI agent gets the same identity and access controls as a new employee would: not broader, never implicit.</li>
+<li><strong>They measure adoption, not announcement.</strong> Success is "people are actually using this and it's measurably faster," not "we deployed it in Q2."</li>
+</ol>
+
+<p>None of these are technical breakthroughs. They're operating discipline, the same discipline that separates a company that survives 22 years across six industries from one that doesn't.</p>
+
+<h2>The Fix Isn't a Bigger AI Budget. It's Better Governance.</h2>
+
+<p>AI isn't failing at 79% of companies because the models are weak. GPT-class and NVIDIA-accelerated systems are more capable than ever. It's failing because most organizations deploy powerful tools with the governance maturity of a browser extension.</p>
+
+<p>If you recognize any of this in your own rollout, the fix starts with treating AI like any other system with access to your data. That means an owner, an access policy, and a security review before the next dollar goes to another tool.</p>
+
+<p>That's the lens I bring to every AMSYS client conversation, and to NVIDIA's advisory sessions. The companies winning with AI right now aren't the ones moving fastest. They're the ones who built the guardrails before they needed them.</p>
+
+<p><strong>If your organization is rolling out AI faster than it's governing it, that's exactly the gap AMSYS closes for clients across technology, healthcare, finance, and four other industries. <a href="https://khalidparekh.com/contact/">Schedule a conversation with the AMSYS team</a> for a governance review before your next AI tool goes live. If you're planning an executive offsite or board session on AI strategy, reach out about <a href="https://khalidparekh.com/contact/">having Khalid speak</a>.</strong></p>
+</article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap foot-grid">
+      <div class="foot-brand">
+        <img src="../../assets/images/logo-full.png" width="52" height="52" alt="Parekh crest logo" />
+        <p>Khalid “KP” Parekh — Entrepreneur, technology visionary, and Founder &amp; CEO of AMSYS Group, based in Houston, Texas.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Navigate</h4>
+        <a href="../../about/">About</a>
+        <a href="../../press/">Press &amp; News</a>
+        <a href="../../leadership/">Leadership &amp; Vision</a>
+        <a href="../../blog/">Blog</a>
+      </div>
+      <div class="foot-col">
+        <h4>Connect</h4>
+        <a href="https://www.linkedin.com/in/khparekh/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://amsysgroup.com" target="_blank" rel="noopener">AMSYS Group</a>
+        <a href="../../contact/">Contact</a>
+      </div>
+      <div class="foot-col">
+        <h4>Social</h4>
+        <a href="https://www.youtube.com/@KhalidParekhOfficial" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.facebook.com/khalid.parekh" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.instagram.com/p/DRwutgIk4uT/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="wrap foot-bottom">
+      <span>© <span class="year"></span> Khalid Parekh. All rights reserved.</span>
+    </div>
+  </footer>
+  <script>document.querySelectorAll('.year').forEach(el=>el.textContent=new Date().getFullYear());</script>
+  <script src="../../js/main.js" defer></script>
+</body>
+</html>
