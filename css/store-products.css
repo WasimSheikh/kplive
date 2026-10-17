@@ -360,7 +360,7 @@ section .owl-controls {
       background-color: rgba(0, 0, 0, 0.49);
       position: absolute;
       z-index: 2; }
-    .ws-offre01 .ads4 h1, .ws-offre01 .ads8 h1 {
+    .ws-offre01 .ads4 h2, .ws-offre01 .ads8 h2 {
       font-family: "Montserrat", sans-serif;
       font-size: 36px;
       font-weight: bold;
@@ -373,7 +373,7 @@ section .owl-controls {
       padding: 5%;
       line-height: 60px;
       z-index: 2; }
-  .ws-offre01 .ads8 a h1 {
+  .ws-offre01 .ads8 a h2 {
     top: 35%;
     left: 0px;
     text-align: center;
@@ -394,7 +394,7 @@ section .owl-controls {
 
 .ws-offre01.style02 .ads8 {
   padding: 0; }
-  .ws-offre01.style02 .ads8 a h1 {
+  .ws-offre01.style02 .ads8 a h2 {
     padding-left: 15px !important;
     padding-right: 15px !important; }
   .ws-offre01.style02 .ads8 button {
@@ -686,7 +686,7 @@ section.ws-featured-products {
   
   section.ws-slider #owl-warmshop04.owl-carousel .slider_item { height: 60vh; }
   .ws-slider.style04 .info-slider h3 { font-size: 22px; padding: 0 15px; }
-  .ws-offre01.style02 .ads8 a h1 { font-size: 20px; }
+  .ws-offre01.style02 .ads8 a h2 { font-size: 20px; }
 }
 @media only screen and (max-width: 768px) {
   section.ws-slider #owl-warmshop04.owl-carousel .slider_item { height: 50vh; }
@@ -695,6 +695,18 @@ section.ws-featured-products {
 }
 @media only screen and (max-width: 480px) {
   .ws-slider.style04 .info-slider h3 { font-size: 16px; }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 /* Bootstrap-like float grid for store featured/offre (matches original) */
