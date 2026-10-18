@@ -1,0 +1,7 @@
+# This site is deployed as static HTML by .github/workflows/static.yml.
+# That workflow deletes docs/ before the Pages upload, because the job does
+# not run Jekyll. The exclude below is the Jekyll equivalent if a Jekyll
+# build is ever used. Do not switch GitHub Pages to publish the /docs folder;
+# that setting would serve docs/backlink-opportunities.md.
+exclude:
+  - docs
