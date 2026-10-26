@@ -145,7 +145,7 @@
 }
 [data-theme="dark"] .foot-brand b { color: var(--text); }
 [data-theme="dark"] .foot-brand p { color: var(--text-muted); }
-[data-theme="dark"] .foot-col h4 { color: var(--text-2); }
+[data-theme="dark"] .foot-col .footer-heading { color: var(--text-2); }
 [data-theme="dark"] .foot-col a { color: var(--text-muted); }
 [data-theme="dark"] .foot-col a:hover { color: var(--text); }
 [data-theme="dark"] .foot-bottom {
@@ -1616,7 +1616,7 @@ h1, h2, h3, .display {
   font-size: .95rem;
   line-height: 1.55;
 }
-.foot-col h4 {
+.foot-col .footer-heading {
   margin: 0 0 .85rem;
   font-family: var(--sans);
   font-size: .68rem;
@@ -1624,6 +1624,7 @@ h1, h2, h3, .display {
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.9);
   font-weight: 500;
+  line-height: inherit;
 }
 .foot-col a {
   display: block;
