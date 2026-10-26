@@ -2451,7 +2451,7 @@ main:has(.mag-cols) .insights {
   color: var(--text-muted);
   margin-bottom: .75rem;
 }
-.press-card h3 {
+.press-card .press-card-title {
   font-family: var(--display);
   font-size: clamp(1.35rem, 2.2vw, 1.75rem);
   font-weight: 600;
