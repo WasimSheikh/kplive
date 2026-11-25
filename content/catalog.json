@@ -1,5 +1,14 @@
 [
   {
+    "slug": "ai-infrastructure-readiness-khalid-parekh",
+    "title": "AI Runs on Power: A CEO's Guide to AI Infrastructure Readiness",
+    "date": "2026-11-25",
+    "excerpt": "AI is hitting a power wall. Khalid Parekh explains AI infrastructure readiness: power, cooling, workload placement and 5 questions every CEO should ask.",
+    "link": "https://khalidparekh.com/blog/ai-infrastructure-readiness-khalid-parekh/",
+    "kind": "blog",
+    "image": "ai-infrastructure-readiness-khalid-parekh.png"
+  },
+  {
     "slug": "building-diversified-enterprise-khalid-parekh",
     "title": "Building Beyond One Business: How Shared Capabilities Help Diversified Enterprises Scale",
     "date": "2026-11-13",
