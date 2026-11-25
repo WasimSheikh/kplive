@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("kp-theme");
+        if (t === "dark" || t === "light") document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
+
+  <title>AI Infrastructure Readiness: A CEO's Guide | Khalid Parekh</title>
+  <meta name="description" content="AI is hitting a power wall. Khalid Parekh explains AI infrastructure readiness: power, cooling, workload placement and 5 questions every CEO should ask." />
+  <meta name="keywords" content="Khalid Parekh, KP Parekh, AMSYS Group, AI Infrastructure Readiness, AI Data Center Power, Enterprise AI Infrastructure, AI Workload Placement, Houston" />
+  <link rel="canonical" href="https://khalidparekh.com/blog/ai-infrastructure-readiness-khalid-parekh/" />
+  <meta property="og:title" content="AI Runs on Power: A CEO's Guide to AI Infrastructure Readiness" />
+  <meta property="og:description" content="AI is hitting a power wall. Khalid Parekh explains AI infrastructure readiness: power, cooling, workload placement and 5 questions every CEO should ask." />
+  <meta property="og:url" content="https://khalidparekh.com/blog/ai-infrastructure-readiness-khalid-parekh/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://khalidparekh.com/assets/images/ai-infrastructure-readiness-khalid-parekh.png" />
+  <meta property="og:image:alt" content="Khalid Parekh, AMSYS Group, on AI infrastructure readiness: power, cooling and data center capacity." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AI Runs on Power: A CEO's Guide to AI Infrastructure Readiness" />
+  <meta name="twitter:description" content="AI is hitting a power wall. Khalid Parekh explains AI infrastructure readiness: power, cooling, workload placement and 5 questions every CEO should ask." />
+  <meta name="twitter:image" content="https://khalidparekh.com/assets/images/ai-infrastructure-readiness-khalid-parekh.png" />
+  <meta name="twitter:image:alt" content="Khalid Parekh, AMSYS Group, on AI infrastructure readiness: power, cooling and data center capacity." />
+  <meta name="twitter:url" content="https://khalidparekh.com/blog/ai-infrastructure-readiness-khalid-parekh/" />
+  <link rel="icon" href="../../assets/images/logo.png" />
+  <link rel="apple-touch-icon" href="../../assets/images/logo-full.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/main.css" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": [
+    "BlogPosting",
+    "Article"
+  ],
+  "headline": "AI Runs on Power: A CEO's Guide to AI Infrastructure Readiness",
+  "description": "AI is hitting a power wall. Khalid Parekh explains AI infrastructure readiness: power, cooling, workload placement and 5 questions every CEO should ask.",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://khalidparekh.com/assets/images/ai-infrastructure-readiness-khalid-parekh.png",
+    "width": 1672,
+    "height": 941,
+    "description": "Khalid Parekh, AMSYS Group, on AI infrastructure readiness: power, cooling and data center capacity."
+  },
+  "datePublished": "2026-11-25",
+  "dateModified": "2026-11-25",
+  "author": {
+    "@type": "Person",
+    "@id": "https://khalidparekh.com/#person",
+    "name": "Khalid “KP” Parekh",
+    "jobTitle": "Founder, Chairman & CEO, AMSYS Group",
+    "url": "https://khalidparekh.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://khalidparekh.com/#organization",
+    "name": "AMSYS Group",
+    "url": "https://amsysgroup.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://khalidparekh.com/assets/images/logo-full.png"
+    }
+  },
+  "url": "https://khalidparekh.com/blog/ai-infrastructure-readiness-khalid-parekh/",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://khalidparekh.com/blog/ai-infrastructure-readiness-khalid-parekh/"
+  },
+  "keywords": "Khalid Parekh, KP Parekh, AMSYS Group, AI Infrastructure Readiness, AI Data Center Power, Enterprise AI Infrastructure, AI Workload Placement, Houston"
+}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header scrolled" data-header>
+    <div class="wrap nav-bar">
+      <a class="brand" href="../../" aria-label="Khalid Parekh home">
+        <img src="../../assets/images/logo-full.png" width="44" height="44" alt="Parekh crest logo" />
+        <span><b>Khalid Parekh</b><small>Official Website</small></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-drawer"><i></i></button>
+      <div class="nav-drawer" id="nav-drawer">
+        <nav aria-label="Primary">
+                    <ul class="nav-links">
+            <li><a href="../../">Home</a></li>
+            <li><a href="../../about/">About</a></li>
+            <li><a href="../../press/">Press &amp; News</a></li>
+            <li><a href="../../leadership/">Leadership &amp; Vision</a></li>
+            <li><a href="../../blog/">Blog</a></li>
+            <li><a href="../../product/">Store</a></li>
+            <li class="nav-theme">
+              <div class="theme-dropdown" data-theme-dropdown>
+                <button type="button" class="theme-trigger" aria-haspopup="listbox" aria-expanded="false" aria-label="Color theme">
+                  <span class="theme-trigger-icon" aria-hidden="true">◐</span>
+                  <span class="theme-trigger-label" data-theme-label>Light</span>
+                  <span class="theme-trigger-caret" aria-hidden="true">▾</span>
+                </button>
+                <ul class="theme-menu" role="listbox" aria-label="Color theme" hidden>
+                  <li><button type="button" role="option" data-theme-set="light">Light</button></li>
+                  <li><button type="button" role="option" data-theme-set="dark">Dark</button></li>
+                </ul>
+              </div>
+            </li>
+
+            <li><a class="btn btn-fill" href="../../contact/">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+    <header class="article-hero">
+      <div class="wrap">
+        <a class="back-link" href="../../blog/">← Blog</a>
+        <div class="meta">Nov 25, 2026 · Khalid Parekh</div>
+        <h1 class="d3">AI Runs on Power: A CEO's Guide to AI Infrastructure Readiness</h1>
+      </div>
+    </header>
+    <article class="article-body">
+<p><img src="../../assets/images/ai-infrastructure-readiness-khalid-parekh.png" width="1672" height="941" alt="Khalid Parekh, AMSYS Group, on AI infrastructure readiness: power, cooling and data center capacity." /></p>
+
+<p><em>By Khalid “KP” Parekh | Founder, Chairman &amp; CEO, AMSYS Group</em></p>
+
+<p>Most AI conversations in the boardroom start with models. Which one, which vendor, which use case. Very few start with the question that increasingly decides whether any of it ships: where will this run, and is there enough power to run it?</p>
+
+<p>That question used to belong to the facilities team. It now belongs to the CEO.</p>
+
+<p>AI infrastructure readiness is an organization's ability to supply the power, cooling, connectivity and security its AI workloads need, at a cost the business case can carry. Get it right and AI scales on schedule. Get it wrong and the strategy waits in line for capacity nobody planned for.</p>
+
+<p>I've written about <a href="https://khalidparekh.com/blog/why-enterprise-ai-strategies-fail/">why most enterprise AI strategies fail</a> and <a href="https://khalidparekh.com/ai-agent-governance-ceo-playbook/">how to govern the AI agents</a> now running inside companies. This piece is about the layer underneath both.</p>
+
+<h2>The Constraint Has Moved From Chips to Power</h2>
+
+<p>For two years, the headline shortage was GPUs. The quieter shortage is electricity.</p>
+
+<p>U.S. data centers used about 4.4% of the country's electricity in 2023, according to <a href="https://www.energy.gov/articles/doe-releases-new-report-evaluating-increase-electricity-demand-data-centers" target="_blank" rel="noopener">Lawrence Berkeley National Laboratory's report for the Department of Energy</a>. By 2028, that share could reach 6.7% to 12%. Globally, the <a href="https://www.iea.org/reports/energy-and-ai/energy-demand-from-ai" target="_blank" rel="noopener">International Energy Agency</a> projects data center electricity use will more than double by 2030, to around 945 terawatt hours. That is slightly more than all of Japan uses today, and AI is the main driver.</p>
+
+<p>Gartner puts a sharper point on it. It <a href="https://www.gartner.com/en/newsroom/press-releases/2024-11-12-gartner-predicts-power-shortages-will-restrict-40-percent-of-ai-data-centers-by-20270" target="_blank" rel="noopener">predicts 40% of existing AI data centers will be operationally constrained by power availability by 2027</a>, and expects rising power costs to flow through to the price of AI services.</p>
+
+<p>So what: the AI roadmap you approved this year assumes capacity that someone, somewhere, still has to build and power.</p>
+
+<h2>Why This Is a CEO Problem, Not a Facilities Problem</h2>
+
+<p>AI hardware is a different animal. A single NVIDIA GB200 NVL72 rack draws <a href="https://docs.nvidia.com/dgx/dgxgb200-user-guide/hardware.html" target="_blank" rel="noopener">roughly 120 kilowatts</a> and is liquid cooled. The typical data center rack is nowhere close. Uptime Institute's <a href="https://datacenter.uptimeinstitute.com/rs/711-RIA-145/images/2025.Annual.Survey.Report.pdf" target="_blank" rel="noopener">2025 Global Data Center Survey</a> put the average typical rack density at just under 9 kW.</p>
+
+<p>That gap is not a tuning problem. Most enterprise server rooms, and many older colocation halls, were never designed for it. Uptime also found that only about a third of operators run any AI training or inference today, while far more plan to. A lot of companies are going to find the gap the hard way.</p>
+
+<p>The constraint is not only technical. The <a href="https://www.flexential.com/resources/report/2026-state-ai-infrastructure" target="_blank" rel="noopener">2026 State of AI Infrastructure Report</a>, published by data center provider Flexential, surveyed more than 350 enterprise IT leaders. In it, 89% said reliable grid power influences their AI deployment decisions, and 55% ranked power cost as the top factor in where AI workloads go. The share expecting measurable AI returns within a year fell from 51% to 36%.</p>
+
+<p>When power shapes location, cost, timeline and ROI, it is a strategy decision. That puts it on the CEO's desk.</p>
+
+<h2>Five Questions That Define AI Infrastructure Readiness</h2>
+
+<p>Bring these to your next leadership meeting. If the answers are vague, you've found your starting point.</p>
+
+<ol>
+  <li><strong>What will our AI workloads actually require?</strong> Training a model, fine-tuning one and running inference for internal tools are very different loads. Most companies overestimate some needs and badly underestimate others.</li>
+  <li><strong>Where will each workload run, and why?</strong> Public cloud, colocation or on-premises should be a deliberate choice based on cost, data sensitivity, latency and available capacity, not a default.</li>
+  <li><strong>Can our facilities, or our providers' facilities, handle the density?</strong> Ask about power per rack, liquid cooling readiness and real delivery dates for new capacity.</li>
+  <li><strong>What will power cost over the life of the investment?</strong> Price volatility belongs in the business case, and long-term service contracts with clear power terms are worth negotiating now.</li>
+  <li><strong>Are the data and the network close enough to the compute?</strong> Flexential found 96% of respondents had at least one network-related performance issue affecting AI workloads in the past year. Compute that sits far from your data is compute you pay to wait on.</li>
+</ol>
+
+<p>Key takeaway: readiness is not one number. It's the match between what each workload needs and where it can realistically run.</p>
+
+<h2>Where Your AI Runs Is a Business Decision</h2>
+
+<p>Placement used to be decided once, during a cloud migration, and rarely revisited. AI changes that.</p>
+
+<p>Sensitive data may need to stay in environments you control. High-volume inference that runs every day may cost less on dedicated infrastructure than on metered cloud capacity. Short experiments and burst training usually belong in the cloud. The right answer is almost always a mix, and the mix should be reviewed as costs and capacity shift.</p>
+
+<p>What matters is that someone owns the decision. In too many companies, placement is decided by whichever team moves first, and the bill shows up later. It's the same pattern I described in <a href="https://khalidparekh.com/blog/the-executives-playbook-for-building-an-ai-strategy-that-actually-delivers/">The Executive's Playbook for Building an AI Strategy That Actually Delivers</a>: strategy without ownership turns into a collection of experiments.</p>
+
+<p>So what: treat workload placement like capital allocation, because that's what it is.</p>
+
+<h2>Efficiency Is a Strategy, Not a Compromise</h2>
+
+<p>The easiest power to secure is the power you don't need.</p>
+
+<p>Gartner's own advice is to use the minimum compute that does the job and to look at options like edge computing and smaller language models. That's sound business guidance, not just good engineering. A smaller model built for a specific task can be cheaper to run, faster to respond and easier to govern than a general model asked to do everything.</p>
+
+<p>Efficiency also lives in the basics: retiring idle servers, consolidating underused environments and measuring utilization before buying more hardware. None of it is glamorous. All of it frees capacity for the AI work that matters.</p>
+
+<h2>Infrastructure Security Belongs in the Same Conversation</h2>
+
+<p>New AI infrastructure is new attack surface. GPU clusters, model files and the data pipelines feeding them need the same discipline as any critical system: tight access, segmentation, monitoring and a recovery plan that has actually been tested.</p>
+
+<p>The power and cooling systems behind them are increasingly connected and managed remotely too. If a cooling failure can take your AI capacity offline, it belongs in your resilience plan and your <a href="https://khalidparekh.com/blog/cybersecurity-for-ceos-what-you-must-know-before-its-too-late/">cybersecurity review</a>.</p>
+
+<p>So what: an AI environment that is fast but fragile is not ready.</p>
+
+<h2>What Houston Already Knows</h2>
+
+<p>AMSYS was founded in Houston in 2003, in a city where energy has always been a strategic conversation. Houston understands something the technology world is now learning: businesses that plan for energy early grow on their own timeline. The ones that don't end up waiting.</p>
+
+<p>AI is putting technology and energy in the same planning meeting. Leaders who are comfortable in both rooms will have the advantage, which is also why <a href="https://khalidparekh.com/blog/building-diversified-enterprise-khalid-parekh/">diversified enterprises that share capabilities</a> across technology and infrastructure are well placed for what comes next.</p>
+
+<h2>What to Do in the Next 90 Days</h2>
+
+<ul>
+  <li><strong>Name an owner.</strong> One executive accountable for AI infrastructure across IT, facilities and finance.</li>
+  <li><strong>Inventory the demand.</strong> List current and planned AI workloads with their compute, data and latency needs.</li>
+  <li><strong>Map the supply.</strong> Document what your facilities and providers can deliver in power, density and timing.</li>
+  <li><strong>Put power in the business case.</strong> Model electricity cost and price volatility for every major AI investment.</li>
+  <li><strong>Right-size before you scale.</strong> Test whether smaller models or smarter placement can meet the need first.</li>
+  <li><strong>Add infrastructure to the risk register.</strong> Include power, cooling and AI clusters in resilience and security reviews.</li>
+</ul>
+
+<h2>The Bottom Line</h2>
+
+<p>AI strategy and infrastructure strategy are now the same strategy. The companies that scale AI over the next few years won't just be the ones with the best models. They'll be the ones that secured the power, space and security to run them, and planned for it before everyone else did.</p>
+
+<p>Ask your team where your AI will run in 2028 and what it will take to power it. If nobody can answer, that's the most important AI project on your list.</p>
+
+<hr />
+
+<h3>About the Author</h3>
+
+<p><strong>Khalid “KP” Parekh</strong> is the Founder, Chairman, and CEO of <a href="https://www.amsys.com/group" target="_blank" rel="noopener">AMSYS Group</a>, a Houston-founded enterprise with capabilities spanning technology, infrastructure, energy, and specialized talent, and a <a href="https://khalidparekh.com/blog/amsys-ceo-khalid-parekh-appointed-to-nvidia-global-enterprise-ai-partner-advisory-board/">Founding Member of the NVIDIA Global Enterprise AI Partner Advisory Board</a>. Read more on <a href="https://khalidparekh.com/about/">Khalid Parekh's official website</a> or visit the <a href="https://www.amsys.com/about" target="_blank" rel="noopener">AMSYS leadership page</a>.</p>
+
+<p><em>Sources: <a href="https://www.energy.gov/articles/doe-releases-new-report-evaluating-increase-electricity-demand-data-centers" target="_blank" rel="noopener">LBNL / U.S. DOE, Dec 2024</a> · <a href="https://www.iea.org/reports/energy-and-ai/energy-demand-from-ai" target="_blank" rel="noopener">IEA, Energy and AI, Apr 2025</a> · <a href="https://www.gartner.com/en/newsroom/press-releases/2024-11-12-gartner-predicts-power-shortages-will-restrict-40-percent-of-ai-data-centers-by-20270" target="_blank" rel="noopener">Gartner, Nov 2024</a> · <a href="https://docs.nvidia.com/dgx/dgxgb200-user-guide/hardware.html" target="_blank" rel="noopener">NVIDIA DGX GB200 User Guide</a> · <a href="https://datacenter.uptimeinstitute.com/rs/711-RIA-145/images/2025.Annual.Survey.Report.pdf" target="_blank" rel="noopener">Uptime Institute, Jul 2025</a> · <a href="https://www.flexential.com/resources/report/2026-state-ai-infrastructure" target="_blank" rel="noopener">Flexential, 2026 State of AI Infrastructure Report</a></em></p>
+</article>
+    <!-- more-posts:catalog -->
+    <section class="more-posts" aria-labelledby="more-posts-heading">
+      <div class="wrap">
+        <h2 id="more-posts-heading">More posts to read</h2>
+        <div class="mag-cols">
+          <a class="mag-item" href="../ai-php-vulnerability-cybersecurity-leadership-lessons/">
+            <div class="meta">Oct 23, 2026</div>
+            <h3>AI Cybersecurity Leadership: What the PHP Flaw Teaches Every CEO</h3>
+            <p>Khalid Parekh explains what the AI-found PHP vulnerability, in sites powering 70% of the web, teaches CEOs about AI cybersecurity leadership.</p>
+            <span class="more">Read →</span>
+          </a>
+          <a class="mag-item" href="../amsys-ceo-khalid-parekh-appointed-to-nvidia-global-enterprise-ai-partner-advisory-board/">
+            <div class="meta">Dec 8, 2025</div>
+            <h3>AMSYS CEO Khalid Parekh Appointed to NVIDIA Global Enterprise AI Partner Advisory Board</h3>
+            <p>Houston, TX – AMSYS Innovative Solutions is proud to announce that its Founder, Chairman, and CEO, Khalid Parekh (KP), has been named a Founding…</p>
+            <span class="more">Read →</span>
+          </a>
+          <a class="mag-item" href="../who-is-khalid-parekh-founder-and-ceo-of-amsys-group/">
+            <div class="meta">Jun 17, 2026</div>
+            <h3>Who Is Khalid Parekh? Founder and CEO of AMSYS Group</h3>
+            <p>Khalid Parekh is the Founder, Chairman, and Chief Executive Officer of AMSYS Group, a global technology organization providing innovative IT…</p>
+            <span class="more">Read →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap foot-grid">
+      <div class="foot-brand">
+        <img src="../../assets/images/logo-full.png" width="52" height="52" alt="Parekh crest logo" loading="lazy" />
+        <p>Khalid “KP” Parekh: Entrepreneur, technology visionary, and Founder &amp; CEO of AMSYS Group, based in Houston, Texas.</p>
+      </div>
+      <div class="foot-col">
+        <h2 class="footer-heading">Navigate</h2>
+        <a href="../../about/">About</a>
+        <a href="../../press/">Press &amp; News</a>
+        <a href="../../leadership/">Leadership &amp; Vision</a>
+        <a href="../../blog/">Blog</a>
+      </div>
+      <div class="foot-col">
+        <h2 class="footer-heading">Connect</h2>
+        <a href="https://www.linkedin.com/in/khparekh/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://amsysgroup.com" target="_blank" rel="noopener">AMSYS Group</a>
+        <a href="../../contact/">Contact</a>
+      </div>
+      <div class="foot-col">
+        <h2 class="footer-heading">Social</h2>
+        <a href="https://www.youtube.com/@KhalidParekhOfficial" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.facebook.com/khalid.parekh" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.instagram.com/p/DRwutgIk4uT/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="wrap foot-bottom">
+      <span>© <span class="year"></span> Khalid Parekh. All rights reserved.</span>
+    </div>
+  </footer>
+  <script>document.querySelectorAll('.year').forEach(el=>el.textContent=new Date().getFullYear());</script>
+  <script src="../../js/main.js" defer></script>
+</body>
+</html>
