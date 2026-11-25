@@ -33,10 +33,18 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      - name: Keep internal docs off the published site
+        run: |
+          # docs/ holds internal notes such as backlink-opportunities.md.
+          # This job uploads the repository as static files and does not run
+          # Jekyll, so the _config.yml exclude alone would not stop Pages
+          # from serving that file. Remove docs/ before the artifact is built.
+          rm -rf docs
+          test ! -e docs
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
+          # Upload the repository after internal docs have been removed.
           path: '.'
       - name: Deploy to GitHub Pages
         id: deployment
